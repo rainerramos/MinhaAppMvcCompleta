@@ -14,7 +14,6 @@ builder.Configuration
     .AddJsonFile($"appsettings.{builder.Environment.EnvironmentName}.json", true, true)
     .AddEnvironmentVariables();
 
-// ConfigureServices
 builder.Services.AddIdentityConfiguration(builder.Configuration);
 
 builder.Services.AddDbContext<MeuDbContext>(options =>
