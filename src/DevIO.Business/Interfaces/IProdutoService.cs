@@ -7,9 +7,10 @@ using System.Threading.Tasks;
 
 namespace DevIO.Business.Interfaces
 {
-    public interface IFornecedorRepository : IRepository<Fornecedor>
+    public interface IProdutoService : IDisposable
     {
-        Task<Fornecedor> ObterFornecedorEndereco(Guid id);
-        Task<Fornecedor> ObterFornecedorProdutosEndereco(Guid id);
+        Task Adicionar(Produto produto);
+        Task Atualizar(Produto produto);
+        Task Remover(Guid id);
     }
 }

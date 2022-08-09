@@ -3,8 +3,9 @@ using Microsoft.AspNetCore.Mvc;
 using DevIO.App.ViewModels;
 using DevIO.Business.Interfaces;
 using AutoMapper;
-using AppMvcBasica.Models;
+using DevIO.Business.Models;
 using Microsoft.AspNetCore.Authorization;
+using DevIo.Business.Models;
 
 namespace DevIO.App.Controllers
 {
@@ -102,7 +103,7 @@ namespace DevIO.App.Controllers
             return RedirectToAction("Index");
         }
 
-        [Route("editar-fornecedor/{id:guid}")]
+        [Route("excluir-fornecedor/{id:guid}")]
         public async Task<IActionResult> Delete(Guid id)
         {
             var fornecedorViewModel = await ObterFornecedorEndereco(id);
@@ -115,7 +116,7 @@ namespace DevIO.App.Controllers
             return View(fornecedorViewModel);
         }
 
-        [Route("editar-fornecedor/{id:guid}")]
+        [Route("excluir-fornecedor/{id:guid}")]
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(Guid id)
@@ -129,7 +130,7 @@ namespace DevIO.App.Controllers
             return RedirectToAction("Index");
         }
 
-        [Route("editar-fornecedor/{id:guid}")]
+        [Route("obter-endereco-fornecedor/{id:guid}")]
         public async Task<IActionResult> ObterEndereco(Guid id)
         {
             var fornecedor = await ObterFornecedorEndereco(id);
@@ -142,7 +143,7 @@ namespace DevIO.App.Controllers
             return PartialView("_DetalhesEndereco", fornecedor);
         }
 
-        [Route("editar-fornecedor/{id:guid}")]
+        [Route("obter-endereco-fornecedor/{id:guid}")]
         public async Task<IActionResult> AtualizarEndereco(Guid id)
         {
             var fornecedor = await ObterFornecedorEndereco(id);
@@ -155,6 +156,7 @@ namespace DevIO.App.Controllers
             return PartialView("_AtualizarEndereco", new FornecedorViewModel { Endereco = fornecedor.Endereco });
         }
 
+        [Route("atualizar-endereco-fornecedor/{id:guid}")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> AtualizarEndereco(FornecedorViewModel fornecedorViewModel)

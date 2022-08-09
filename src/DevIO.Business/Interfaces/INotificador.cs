@@ -1,6 +1,11 @@
-﻿namespace DevIO.App.Configurations
+﻿using DevIO.Business.Notificacoes;
+
+namespace DevIO.App.Configurations
 {
-    internal interface INotificador
+    public interface INotificador
     {
+        bool TemNotificacao();
+        List<Notificacao> ObterNotificacoes();
+        void Handle(Notificacao notificacao);
     }
 }

@@ -1,6 +1,7 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using DevIo.Business.Models;
+using System.ComponentModel.DataAnnotations;
 
-namespace AppMvcBasica.Models
+namespace DevIO.Business.Models
 {
     public class Fornecedor : Entity
     {

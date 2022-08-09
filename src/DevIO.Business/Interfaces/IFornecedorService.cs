@@ -1,6 +1,7 @@
-﻿using AppMvcBasica.Models;
+﻿using DevIo.Business.Models;
+using DevIO.Business.Models;
 
-namespace DevIO.App.Configurations
+namespace DevIO.Business.Intefaces
 {
     public interface IFornecedorService : IDisposable
     {

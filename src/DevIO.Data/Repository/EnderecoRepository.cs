@@ -1,4 +1,4 @@
-﻿using AppMvcBasica.Models;
+﻿using DevIO.Business.Models;
 using DevIO.Business.Interfaces;
 using DevIO.Data.Context;
 using Microsoft.EntityFrameworkCore;
@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DevIo.Business.Models;
 
 namespace DevIO.Data.Repository
 {

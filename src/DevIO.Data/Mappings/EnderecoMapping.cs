@@ -1,4 +1,5 @@
-﻿using AppMvcBasica.Models;
+﻿using DevIo.Business.Models;
+using DevIO.Business.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 

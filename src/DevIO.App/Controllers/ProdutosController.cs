@@ -2,7 +2,7 @@
 using DevIO.App.ViewModels;
 using DevIO.Business.Interfaces;
 using AutoMapper;
-using AppMvcBasica.Models;
+using DevIO.Business.Models;
 using Microsoft.AspNetCore.Authorization;
 
 namespace DevIO.App.Controllers
@@ -30,7 +30,7 @@ namespace DevIO.App.Controllers
         }
 
         [AllowAnonymous]
-        [Route("lista-de-produtos")]
+        [Route("dados-do-produto/{id:guid}")]
         public async Task<IActionResult> Details(Guid id)
         {
             var produtoViewModel = await ObterProduto(id);

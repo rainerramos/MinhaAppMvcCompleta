@@ -1,6 +1,7 @@
-﻿using AppMvcBasica.Models;
+﻿using DevIO.Business.Models;
 using AutoMapper;
 using DevIO.App.ViewModels;
+using DevIo.Business.Models;
 
 namespace DevIO.App.AutoMapper
 {
