@@ -27,7 +27,6 @@ builder.Services.ResolveDependencies();
 
 var app = builder.Build();
 
-// Configure
 if (app.Environment.IsDevelopment())
 {
     app.UseDeveloperExceptionPage();
